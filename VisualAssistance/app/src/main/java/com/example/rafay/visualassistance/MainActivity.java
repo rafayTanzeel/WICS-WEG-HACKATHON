@@ -29,6 +29,18 @@ public class MainActivity extends AppCompatActivity {
         }
         );
 
+        if (result == TextToSpeech.LANG_NOT_SUPPORTED || result == TextToSpeech.LANG_MISSING_DATA) {
+
+            Toast.makeText(getApplicationContext(), "Feature Not Supported", Toast.LENGTH_SHORT).show();
+
+        } else {
+            ttsobj.speak("Where would you like to go", TextToSpeech.QUEUE_FLUSH, null);
+
+        }
+
+
+
+
         Button b=(Button) findViewById(R.id.voiceOutputer);
         b.setOnClickListener(
                 new View.OnClickListener() {

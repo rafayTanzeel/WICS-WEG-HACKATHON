@@ -13,4 +13,5 @@
         android:id="@+id/logoPic"
         android:src="@drawable/logo"
         android:layout_centerInParent="true"/>
+
 </RelativeLayout>
