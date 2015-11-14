@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), "Feature Not Supported", Toast.LENGTH_SHORT).show();
 
                         } else {
-                            ttsobj.speak("Hello", TextToSpeech.QUEUE_FLUSH, null);
+                            ttsobj.speak("Welcome to Visual Assistance, click the button in the center to state location", TextToSpeech.QUEUE_FLUSH, null);
 
                         }
                     }
