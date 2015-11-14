@@ -24,13 +24,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Feature Not Supported", Toast.LENGTH_SHORT).show();
-
-
                 }
-
-
-
-
             }
         }
         );
