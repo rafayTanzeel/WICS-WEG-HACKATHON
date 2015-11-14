@@ -49,7 +49,7 @@ public class Splash_Screen extends AppCompatActivity {
 
                 } else {
                     ttsobj.stop();
-                    ttsobj.speak("Welcome to Visual Assistance, click the button in the center to state location", TextToSpeech.QUEUE_FLUSH, null);
+                    ttsobj.speak("Welcome to Visual Assistance, hold the button for 3 seconds in the center to state location", TextToSpeech.QUEUE_FLUSH, null);
                     iv.startAnimation(an);
                 }
             }
@@ -65,7 +65,7 @@ public class Splash_Screen extends AppCompatActivity {
 
                                 } else {
                                     ttsobj.stop();
-                                    ttsobj.speak("Welcome to Visual Assistance, click the button in the center to state location", TextToSpeech.QUEUE_FLUSH, null);
+                                    ttsobj.speak("Welcome to Visual Assistance, hold the button for 3 seconds in the center to state location", TextToSpeech.QUEUE_FLUSH, null);
                                     iv.startAnimation(an);
                                 }
                             }
