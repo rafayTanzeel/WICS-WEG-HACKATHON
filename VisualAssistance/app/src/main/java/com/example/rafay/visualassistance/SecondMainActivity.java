@@ -67,7 +67,7 @@ public class SecondMainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT);
                     t.show();
                 }
-                return false;
+                return true;
             }
         });
 
