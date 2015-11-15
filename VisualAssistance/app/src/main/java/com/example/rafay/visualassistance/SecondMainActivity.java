@@ -64,17 +64,9 @@ public class SecondMainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT);
                     t.show();
                 }
-
-                // promptSpeechInput();
-
             }
         });
-
-
-
     }
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
