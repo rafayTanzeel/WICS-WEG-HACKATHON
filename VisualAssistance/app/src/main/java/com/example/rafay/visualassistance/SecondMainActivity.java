@@ -36,6 +36,7 @@ public class SecondMainActivity extends AppCompatActivity {
     private ImageButton btnSpeak;
     private MediaPlayer mp2;
     private MediaPlayer mp3;
+    private MediaPlayer mp4;
     protected static final int RESULT_SPEECH = 1;
 
     @Override
@@ -44,11 +45,30 @@ public class SecondMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second_main);
         mp2 = MediaPlayer.create(SecondMainActivity.this, R.raw.options);
         mp3 = MediaPlayer.create(SecondMainActivity.this, R.raw.phone);
+        mp4= MediaPlayer.create(SecondMainActivity.this, R.raw.text);
         PackageManager pm = getPackageManager();
         List<ResolveInfo> activities = pm.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
         mp2.start();
         Button yes = (Button) findViewById(R.id.acceptedYes);
         Button no = (Button) findViewById(R.id.acceptedNo);
+
+        no.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp4.start();
+            }
+        });
+
+        no.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                String geoUri = "http://maps.google.com/maps?q=loc:" + 49.2721559 + "," + -122.9256241;
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(geoUri));
+                startActivity(intent);
+                return false;
+            }
+        });
+
 
         yes.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
