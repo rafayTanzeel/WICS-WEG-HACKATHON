@@ -40,7 +40,7 @@ public class Splash_Screen extends AppCompatActivity {
                     public boolean onLongClick(View v) {
                         iv.startAnimation(an2);
                         finish();
-                        Intent i = new Intent(getBaseContext(), MainActivity.class);
+                        Intent i = new Intent(getBaseContext(), SecondMainActivity.class);
                         startActivity(i);
                         return false;
                     }
