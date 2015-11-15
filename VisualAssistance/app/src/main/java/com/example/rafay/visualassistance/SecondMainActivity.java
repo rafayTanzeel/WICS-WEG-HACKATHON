@@ -45,7 +45,7 @@ public class SecondMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second_main);
         mp2 = MediaPlayer.create(SecondMainActivity.this, R.raw.options);
         mp3 = MediaPlayer.create(SecondMainActivity.this, R.raw.phone);
-        mp4= MediaPlayer.create(SecondMainActivity.this, R.raw.text);
+        mp4= MediaPlayer.create(SecondMainActivity.this, R.raw.opening_google_maps);
         PackageManager pm = getPackageManager();
         List<ResolveInfo> activities = pm.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
         mp2.start();
