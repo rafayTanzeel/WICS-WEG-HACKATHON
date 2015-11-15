@@ -2,14 +2,14 @@
 Visual Assistance
 ========
 
-Project will help blind people get in SMS or call with contacts easier
+Project will assist blind people do various tasks such as call friend, text friend current location (not yet), define words (not yet)
 by using voiceOvers and speech to text recognition
 
 Look how easy it is to use:
 
 Just listen to the voice overs for instructions.
-Tap the button to listen to voice over instructions again.
-Hold to proceed to the next menu option.
+Tap the button to listen to what they do.
+Hold on button to proceed to the next menu option.
 
 Features
 --------
@@ -22,14 +22,13 @@ Features
 
 Installation
 ------------
-See gitHub link
+Clone to desktop
 
-GitHub Public Link
-----------
 
-- Source Code: github.com/$project/$project
 
-Support
+Future Considerations
 -------
 
-If you are having issues,deal with it. Leave us alone we are only here for the free food.
+1. Implement texting feature that sends friend geographic location.
+2. Improve UI.
+3. Define words for users
