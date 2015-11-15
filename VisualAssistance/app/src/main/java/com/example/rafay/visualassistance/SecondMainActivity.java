@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.provider.Contacts;
 import android.provider.ContactsContract;
@@ -33,23 +34,25 @@ import java.util.Locale;
 public class SecondMainActivity extends AppCompatActivity {
     public String numberPhone;
     private ImageButton btnSpeak;
-
+    private MediaPlayer mp2;
+    private MediaPlayer mp3;
     protected static final int RESULT_SPEECH = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_main);
-
+        mp2 = MediaPlayer.create(SecondMainActivity.this, R.raw.options);
+        mp3 = MediaPlayer.create(SecondMainActivity.this, R.raw.phone);
         PackageManager pm = getPackageManager();
         List<ResolveInfo> activities = pm.queryIntentActivities(new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
-
+        mp2.start();
         Button yes = (Button) findViewById(R.id.acceptedYes);
         Button no = (Button) findViewById(R.id.acceptedNo);
 
-        yes.setOnClickListener(new View.OnClickListener() {
+        yes.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
-            public void onClick(View v) {
+            public boolean onLongClick(View v) {
                 Intent intent = new Intent(
                         RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
 
@@ -64,7 +67,16 @@ public class SecondMainActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT);
                     t.show();
                 }
+                return false;
             }
+        });
+
+
+        yes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp3.start();
+    }
         });
     }
 
