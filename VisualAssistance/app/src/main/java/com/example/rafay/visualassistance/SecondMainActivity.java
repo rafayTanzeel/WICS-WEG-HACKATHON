@@ -39,6 +39,7 @@ public class SecondMainActivity extends AppCompatActivity {
 
         ed.setText(getPhoneNumber("Mom",this));
 
+        promptSpeechInput();
 
         yes.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,9 @@ public class SecondMainActivity extends AppCompatActivity {
 
 
     }
+
+
+    public void
 
     private void call() {
         Intent in=new Intent(Intent.ACTION_CALL,Uri.parse("tel:7789913233"));
