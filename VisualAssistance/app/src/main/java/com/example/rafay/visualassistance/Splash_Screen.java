@@ -20,7 +20,7 @@ public class Splash_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash__screen);
 
-        mp = MediaPlayer.create(Splash_Screen.this, R.raw.speech);
+        mp = MediaPlayer.create(Splash_Screen.this, R.raw.welcome);
         final ImageView iv=(ImageView)findViewById(R.id.logoPic);
         final Animation an= AnimationUtils.loadAnimation(getBaseContext(),R.anim.logo_rotates);
         final Animation an2= AnimationUtils.loadAnimation(getBaseContext(),R.anim.logo_fade);
