@@ -11,8 +11,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 
-
-
 public class Splash_Screen extends AppCompatActivity {
 
     private MediaPlayer mp;
